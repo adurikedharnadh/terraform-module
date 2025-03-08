@@ -59,7 +59,7 @@ variable "instance_type_instance" {
 }
 
 variable "instance_name" {
-    default = "Kedhar-instance"
+    description = "Name of the instance"
   
 }
 
