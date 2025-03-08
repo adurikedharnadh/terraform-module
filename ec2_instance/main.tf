@@ -39,9 +39,7 @@ resource "aws_security_group" "secirutygroup_name" {
 resource "aws_instance" "ec2_server" {
   ami = var.ami_value
   instance_type = var.instance_type_instance
-  tags = {
-    Name= var.instance_name
-  }
+
   subnet_id = aws_subnet.subnet_create.id
   security_groups = [aws_security_group.secirutygroup_name.id]
 }
